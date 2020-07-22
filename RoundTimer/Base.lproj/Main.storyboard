@@ -1,24 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Set Timer View Controller-->
+        <scene sceneID="S1M-u3-1mT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="coO-QA-tpv" customClass="SetTimerViewController" customModule="RoundTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f5J-TX-KMK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6X6-w6-pjS"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aY3-VH-KOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2302.898550724638" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wGr-gG-tdi">
+            <objects>
+                <viewController id="vKu-Yt-EXy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8f2-cr-Nys">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ohb-y0-Xo0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYh-D7-9VH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="850"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="ohA-bN-hPt">
+            <objects>
+                <viewController id="8Oh-ol-0dZ" customClass="TimerViewController" customModule="RoundTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kn3-mx-XJO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKF-f0-Lev">
+                                <rect key="frame" x="20" y="213" width="374" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba6-t2-L9C">
+                                <rect key="frame" x="20" y="173" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJP-t9-TIS">
+                                <rect key="frame" x="199.5" y="482.5" width="15" height="22"/>
+                                <state key="normal" image="play.fill" catalog="system">
+                                    <attributedString key="attributedTitle"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPauseButtonPushed:" destination="8Oh-ol-0dZ" eventType="touchUpInside" id="EDh-iJ-f0y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LKF-f0-Lev" firstAttribute="top" secondItem="ba6-t2-L9C" secondAttribute="bottom" constant="10" id="2Pu-sQ-bVN"/>
+                            <constraint firstItem="ba6-t2-L9C" firstAttribute="leading" secondItem="XcA-Kh-cox" secondAttribute="leading" constant="20" id="Bpa-Fn-H8v"/>
+                            <constraint firstItem="VJP-t9-TIS" firstAttribute="leading" secondItem="XcA-Kh-cox" secondAttribute="leading" constant="199.5" id="BzR-sS-MPV"/>
+                            <constraint firstItem="ba6-t2-L9C" firstAttribute="top" secondItem="XcA-Kh-cox" secondAttribute="top" constant="85" id="Hoh-fY-uwj"/>
+                            <constraint firstItem="VJP-t9-TIS" firstAttribute="top" secondItem="LKF-f0-Lev" secondAttribute="bottom" constant="150" id="XMb-ai-v0X"/>
+                            <constraint firstItem="XcA-Kh-cox" firstAttribute="trailing" secondItem="ba6-t2-L9C" secondAttribute="trailing" constant="20" id="fF1-wG-jkk"/>
+                            <constraint firstItem="XcA-Kh-cox" firstAttribute="trailing" secondItem="LKF-f0-Lev" secondAttribute="trailing" constant="20" id="ixc-d3-Hld"/>
+                            <constraint firstItem="XcA-Kh-cox" firstAttribute="trailing" secondItem="VJP-t9-TIS" secondAttribute="trailing" constant="199.5" id="nyA-8G-kG8"/>
+                            <constraint firstItem="LKF-f0-Lev" firstAttribute="leading" secondItem="XcA-Kh-cox" secondAttribute="leading" constant="20" id="odT-q2-YHu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XcA-Kh-cox"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SNd-WN-uPC">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="lXk-tG-aSP">
+                            <connections>
+                                <action selector="setTimerButtonPushed:" destination="8Oh-ol-0dZ" id="gem-N6-566"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="playPauseButton" destination="VJP-t9-TIS" id="hlq-rg-ZGx"/>
+                        <outlet property="roundLabel" destination="ba6-t2-L9C" id="Lgf-AG-HFM"/>
+                        <outlet property="setTimerButton" destination="lXk-tG-aSP" id="9LI-g7-86n"/>
+                        <outlet property="timeLabel" destination="LKF-f0-Lev" id="Z4F-yz-aBF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yyp-KL-7in" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208.6956521739132" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nPr-oX-Pn1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hvh-pk-tz6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jNF-TQ-lT3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Oh-ol-0dZ" kind="relationship" relationship="rootViewController" id="CzY-IC-9sg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sbP-dz-hMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298.55072463768118" y="115.84821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+    </resources>
 </document>
