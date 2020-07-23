@@ -14,9 +14,35 @@
                     <view key="view" contentMode="scaleToFill" id="f5J-TX-KMK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3o-Ts-hNJ">
+                                <rect key="frame" x="0.0" y="144" width="414" height="216"/>
+                                <connections>
+                                    <action selector="setRoundTime:" destination="coO-QA-tpv" eventType="valueChanged" id="Udd-wm-o1M"/>
+                                </connections>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQM-s3-bNR">
+                                <rect key="frame" x="0.0" y="460" width="414" height="216"/>
+                                <connections>
+                                    <action selector="setRestTime:" destination="coO-QA-tpv" eventType="valueChanged" id="WD2-7x-acO"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="t3o-Ts-hNJ" firstAttribute="top" secondItem="6X6-w6-pjS" secondAttribute="top" constant="100" id="7l8-lJ-Hdy"/>
+                            <constraint firstItem="AQM-s3-bNR" firstAttribute="trailing" secondItem="6X6-w6-pjS" secondAttribute="trailing" id="9w1-ix-pfE"/>
+                            <constraint firstItem="t3o-Ts-hNJ" firstAttribute="leading" secondItem="f5J-TX-KMK" secondAttribute="leading" id="Tbo-0T-exo"/>
+                            <constraint firstItem="AQM-s3-bNR" firstAttribute="top" secondItem="t3o-Ts-hNJ" secondAttribute="bottom" constant="100" id="Uuf-MA-HRn"/>
+                            <constraint firstItem="6X6-w6-pjS" firstAttribute="trailing" secondItem="t3o-Ts-hNJ" secondAttribute="trailing" id="dkM-OM-Zoj"/>
+                            <constraint firstItem="AQM-s3-bNR" firstAttribute="leading" secondItem="6X6-w6-pjS" secondAttribute="leading" id="q7J-cR-jne"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6X6-w6-pjS"/>
                     </view>
+                    <connections>
+                        <outlet property="setRestPicker" destination="AQM-s3-bNR" id="MGO-7N-tPD"/>
+                        <outlet property="setRoundPicker" destination="t3o-Ts-hNJ" id="Zfw-RA-hhy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aY3-VH-KOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

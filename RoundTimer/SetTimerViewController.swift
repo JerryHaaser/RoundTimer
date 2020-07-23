@@ -10,13 +10,20 @@ import UIKit
 
 class SetTimerViewController: UIViewController {
 
+    @IBOutlet weak var setRoundPicker: UIDatePicker!
+    @IBOutlet weak var setRestPicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func setRoundTime(_ sender: UIDatePicker) {
+    }
+    @IBAction func setRestTime(_ sender: UIDatePicker) {
+    }
+    
     /*
     // MARK: - Navigation
 
