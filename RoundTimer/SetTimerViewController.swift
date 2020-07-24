@@ -23,6 +23,8 @@ class SetTimerViewController: UIViewController {
     }
     @IBAction func setRestTime(_ sender: UIDatePicker) {
     }
+    @IBAction func setButtonPressed(_ sender: UIButton) {
+    }
     
     /*
     // MARK: - Navigation

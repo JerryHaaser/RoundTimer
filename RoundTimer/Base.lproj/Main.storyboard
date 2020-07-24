@@ -27,15 +27,25 @@
                                     <action selector="setRestTime:" destination="coO-QA-tpv" eventType="valueChanged" id="WD2-7x-acO"/>
                                 </connections>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKc-0R-e9o">
+                                <rect key="frame" x="188.5" y="776" width="37" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Set"/>
+                                <connections>
+                                    <action selector="setButtonPressed:" destination="coO-QA-tpv" eventType="touchUpInside" id="7VK-uC-wPi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qKc-0R-e9o" firstAttribute="top" secondItem="AQM-s3-bNR" secondAttribute="bottom" constant="100" id="4U1-au-V82"/>
                             <constraint firstItem="t3o-Ts-hNJ" firstAttribute="top" secondItem="6X6-w6-pjS" secondAttribute="top" constant="100" id="7l8-lJ-Hdy"/>
                             <constraint firstItem="AQM-s3-bNR" firstAttribute="trailing" secondItem="6X6-w6-pjS" secondAttribute="trailing" id="9w1-ix-pfE"/>
                             <constraint firstItem="t3o-Ts-hNJ" firstAttribute="leading" secondItem="f5J-TX-KMK" secondAttribute="leading" id="Tbo-0T-exo"/>
                             <constraint firstItem="AQM-s3-bNR" firstAttribute="top" secondItem="t3o-Ts-hNJ" secondAttribute="bottom" constant="100" id="Uuf-MA-HRn"/>
                             <constraint firstItem="6X6-w6-pjS" firstAttribute="trailing" secondItem="t3o-Ts-hNJ" secondAttribute="trailing" id="dkM-OM-Zoj"/>
                             <constraint firstItem="AQM-s3-bNR" firstAttribute="leading" secondItem="6X6-w6-pjS" secondAttribute="leading" id="q7J-cR-jne"/>
+                            <constraint firstItem="qKc-0R-e9o" firstAttribute="centerX" secondItem="f5J-TX-KMK" secondAttribute="centerX" id="qMw-Kj-rHr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6X6-w6-pjS"/>
                     </view>
