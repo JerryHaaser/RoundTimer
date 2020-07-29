@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol DatePickerDelegate {
+    func destinationDateWasChosen(date: Date)
+}
+
 class SetTimerViewController: UIViewController {
 
     @IBOutlet weak var setRoundPicker: UIDatePicker!
     @IBOutlet weak var setRestPicker: UIDatePicker!
+    
+    var delegate: DatePickerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +27,14 @@ class SetTimerViewController: UIViewController {
     
     @IBAction func setRoundTime(_ sender: UIDatePicker) {
     }
+    
     @IBAction func setRestTime(_ sender: UIDatePicker) {
     }
+    
     @IBAction func setButtonPressed(_ sender: UIButton) {
+        let date = setRoundPicker.date
+        delegate?.destinationDateWasChosen(date: date)
+        dismiss(animated: true, completion: nil)
     }
     
     /*
