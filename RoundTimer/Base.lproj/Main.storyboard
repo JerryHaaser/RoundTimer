@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hvh-pk-tz6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,19 +16,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3o-Ts-hNJ">
-                                <rect key="frame" x="0.0" y="144" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="216"/>
                                 <connections>
                                     <action selector="setRoundTime:" destination="coO-QA-tpv" eventType="valueChanged" id="Udd-wm-o1M"/>
                                 </connections>
                             </datePicker>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQM-s3-bNR">
-                                <rect key="frame" x="0.0" y="460" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="504" width="414" height="216"/>
                                 <connections>
                                     <action selector="setRestTime:" destination="coO-QA-tpv" eventType="valueChanged" id="WD2-7x-acO"/>
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKc-0R-e9o">
-                                <rect key="frame" x="188.5" y="776" width="37" height="42"/>
+                                <rect key="frame" x="188.5" y="820" width="37" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Set"/>
                                 <connections>
@@ -49,6 +49,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6X6-w6-pjS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="e4y-Nh-w0g"/>
                     <connections>
                         <outlet property="setRestPicker" destination="AQM-s3-bNR" id="MGO-7N-tPD"/>
                         <outlet property="setRoundPicker" destination="t3o-Ts-hNJ" id="Zfw-RA-hhy"/>
@@ -122,6 +123,7 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="lXk-tG-aSP">
                             <connections>
                                 <action selector="setTimerButtonPushed:" destination="8Oh-ol-0dZ" id="gem-N6-566"/>
+                                <segue destination="coO-QA-tpv" kind="show" identifier="SetRoundTimeSegue" id="vpJ-2z-8Ln"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
