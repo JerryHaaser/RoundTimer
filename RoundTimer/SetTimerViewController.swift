@@ -35,6 +35,7 @@ class SetTimerViewController: UIViewController {
         let date = setRoundPicker.date
         delegate?.destinationDateWasChosen(date: date)
         dismiss(animated: true, completion: nil)
+        _ = navigationController?.popToRootViewController(animated: true)
     }
     
     /*

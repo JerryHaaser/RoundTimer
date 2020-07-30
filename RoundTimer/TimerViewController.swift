@@ -16,7 +16,7 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var playPauseButton: UIButton!
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
