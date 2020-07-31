@@ -12,8 +12,12 @@ class TimerViewController: UIViewController {
 
     @IBOutlet weak var setTimerButton: UIBarButtonItem!
     @IBOutlet weak var roundLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var roundMinuteLabel: UILabel!
+    @IBOutlet weak var roundSecondLabel: UILabel!
+    @IBOutlet weak var restMinuteLabel: UILabel!
+    @IBOutlet weak var restSecondLabel: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
+ 
     
     
     override func viewDidLoad() { 
@@ -64,7 +68,7 @@ class TimerViewController: UIViewController {
 
 extension TimerViewController: DatePickerDelegate {
     func destinationDateWasChosen(date: Date) {
-        timeLabel.text = dateFormatter.string(from: date)
+        //timeLabel.text = dateFormatter.string(from: date)
     }
     
     
