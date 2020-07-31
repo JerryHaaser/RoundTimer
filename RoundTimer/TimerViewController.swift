@@ -30,10 +30,21 @@ class TimerViewController: UIViewController {
         return formatter
     }
     
+    func startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: roundRepeater(timer:))
+    }
+    
+    func roundRepeater(timer: Timer) {
+        
+    }
+    
+    
+    
     @IBAction func setTimerButtonPushed(_ sender: Any) {
     }
     
     @IBAction func playPauseButtonPushed(_ sender: UIButton) {
+        startTimer()
     }
     
     
