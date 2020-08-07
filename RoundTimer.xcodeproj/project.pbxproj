@@ -17,6 +17,7 @@
 		1CC27B7024C8C7EF00F906F9 /* RoundTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B6F24C8C7EF00F906F9 /* RoundTimerUITests.swift */; };
 		1CC27B7E24C8F35400F906F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */; };
 		1CC27B8024C8F7E200F906F9 /* SetTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */; };
+		1CC27B8224D4AEA800F906F9 /* TImerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8124D4AEA800F906F9 /* TImerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1CC27B7124C8C7EF00F906F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerViewController.swift; sourceTree = "<group>"; };
+		1CC27B8124D4AEA800F906F9 /* TImerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				1CC27B4C24C8C7EC00F906F9 /* SceneDelegate.swift */,
 				1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */,
 				1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */,
+				1CC27B8124D4AEA800F906F9 /* TImerModel.swift */,
 				1CC27B5024C8C7EC00F906F9 /* Main.storyboard */,
 				1CC27B5624C8C7EE00F906F9 /* Assets.xcassets */,
 				1CC27B5824C8C7EE00F906F9 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 				1CC27B8024C8F7E200F906F9 /* SetTimerViewController.swift in Sources */,
 				1CC27B7E24C8F35400F906F9 /* TimerViewController.swift in Sources */,
 				1CC27B5524C8C7EC00F906F9 /* RoundTimer.xcdatamodeld in Sources */,
+				1CC27B8224D4AEA800F906F9 /* TImerModel.swift in Sources */,
 				1CC27B4B24C8C7EC00F906F9 /* AppDelegate.swift in Sources */,
 				1CC27B4D24C8C7EC00F906F9 /* SceneDelegate.swift in Sources */,
 			);

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class TimerViewController: UIViewController {
+class TimerViewController: UIViewController, UIPickerViewDelegate {
+    
 
     @IBOutlet weak var setTimerButton: UIBarButtonItem!
     @IBOutlet weak var roundLabel: UILabel!
@@ -22,16 +23,84 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() { 
         super.viewDidLoad()
+        setTimerClocks()
 
         // Do any additional setup after loading the view.
     }
     
+    //MARK: not sure which one I should use
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setTimerClocks()
+    }
+    
     var timer: Timer?
+    
+    var sTVC: SetTimerViewController?
+    var timeModel: TimeModel?
+    
+//    var roundMinutes: Int?
+//    var roundSeconds: Int?
+//    var restMinutes: Int?
+//    var restSeconds: Int?
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "mm ss"
         return formatter
+    }
+    
+    func setTimerClocks() {
+        guard let sTVC = sTVC else {return}
+        guard let timeModel = timeModel else {return}
+        
+//        if sTVC.roundMinutes == nil {
+//            roundMinuteLabel.text = "00"
+//        } else {
+//            roundMinuteLabel.text = "\(String(describing: sTVC.roundMinutes))"
+//        }
+//
+//        if sTVC.roundSeconds == nil {
+//            roundSecondLabel.text = "00"
+//        } else {
+//            roundSecondLabel.text = "\(String(describing: sTVC.roundSeconds))"
+//        }
+//
+//        if sTVC.restMinutes == nil {
+//            restMinuteLabel.text = "00"
+//        } else {
+//            restMinuteLabel.text = "\(String(describing: sTVC.restSeconds))"
+//        }
+//
+//        if sTVC.restSeconds == nil {
+//            restSecondLabel.text = "00"
+//        } else {
+//            restSecondLabel.text = "\(String(describing: sTVC.restSeconds))"
+//        }
+        
+        if timeModel.roundMinute == nil {
+            roundMinuteLabel.text = "00"
+        } else {
+            roundMinuteLabel.text = "\(String(describing: timeModel.roundMinute))"
+        }
+        
+        if timeModel.roundSecond == nil {
+            roundSecondLabel.text = "00"
+        } else {
+            roundSecondLabel.text = "\(String(describing: timeModel.roundSecond))"
+        }
+        
+        if timeModel.restMinute == nil {
+            restMinuteLabel.text = "00"
+        } else {
+            restMinuteLabel.text = "\(String(describing: timeModel.restMinute))"
+        }
+        
+        if timeModel.restSecond == nil {
+            restSecondLabel.text = "00"
+        } else {
+            restSecondLabel.text = "\(String(describing: timeModel.restSecond))"
+        }
     }
     
     func startTimer() {
@@ -45,6 +114,7 @@ class TimerViewController: UIViewController {
     
     
     @IBAction func setTimerButtonPushed(_ sender: Any) {
+        
     }
     
     @IBAction func playPauseButtonPushed(_ sender: UIButton) {
@@ -66,10 +136,14 @@ class TimerViewController: UIViewController {
 
 }
 
-extension TimerViewController: DatePickerDelegate {
-    func destinationDateWasChosen(date: Date) {
-        //timeLabel.text = dateFormatter.string(from: date)
-    }
-    
-    
-}
+//extension TimerViewController: UIPickerView {
+//    func roundAndRestTimeSet(date: String) {
+//        //timeLabel.text = dateFormatter.string(from: date)
+////        roundMinuteLabel.text =
+////        roundSecondLabel.text =
+////        restMinuteLabel.text =
+////        restSecondLabel.text =
+//    }
+//
+//
+//}
