@@ -18,6 +18,10 @@
 		1CC27B7E24C8F35400F906F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */; };
 		1CC27B8024C8F7E200F906F9 /* SetTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */; };
 		1CC27B8224D4AEA800F906F9 /* TImerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8124D4AEA800F906F9 /* TImerModel.swift */; };
+		1CC27B8424E38F7800F906F9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8324E38F7800F906F9 /* Coordinator.swift */; };
+		1CC27B8624E38FE500F906F9 /* Sotryboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8524E38FE500F906F9 /* Sotryboarded.swift */; };
+		1CC27B8824E3941A00F906F9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8724E3941A00F906F9 /* MainCoordinator.swift */; };
+		1CC27B8A24E3942600F906F9 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8924E3942600F906F9 /* BaseCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerViewController.swift; sourceTree = "<group>"; };
 		1CC27B8124D4AEA800F906F9 /* TImerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImerModel.swift; sourceTree = "<group>"; };
+		1CC27B8324E38F7800F906F9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1CC27B8524E38FE500F906F9 /* Sotryboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sotryboarded.swift; sourceTree = "<group>"; };
+		1CC27B8724E3941A00F906F9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1CC27B8924E3942600F906F9 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +115,9 @@
 			children = (
 				1CC27B4A24C8C7EC00F906F9 /* AppDelegate.swift */,
 				1CC27B4C24C8C7EC00F906F9 /* SceneDelegate.swift */,
-				1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */,
-				1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */,
+				1CC27B8C24E3961500F906F9 /* ViewControllers */,
 				1CC27B8124D4AEA800F906F9 /* TImerModel.swift */,
+				1CC27B8B24E3960600F906F9 /* Coordinators */,
 				1CC27B5024C8C7EC00F906F9 /* Main.storyboard */,
 				1CC27B5624C8C7EE00F906F9 /* Assets.xcassets */,
 				1CC27B5824C8C7EE00F906F9 /* LaunchScreen.storyboard */,
@@ -135,6 +143,26 @@
 				1CC27B7124C8C7EF00F906F9 /* Info.plist */,
 			);
 			path = RoundTimerUITests;
+			sourceTree = "<group>";
+		};
+		1CC27B8B24E3960600F906F9 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				1CC27B8324E38F7800F906F9 /* Coordinator.swift */,
+				1CC27B8724E3941A00F906F9 /* MainCoordinator.swift */,
+				1CC27B8924E3942600F906F9 /* BaseCoordinator.swift */,
+				1CC27B8524E38FE500F906F9 /* Sotryboarded.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		1CC27B8C24E3961500F906F9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */,
+				1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +301,11 @@
 				1CC27B5524C8C7EC00F906F9 /* RoundTimer.xcdatamodeld in Sources */,
 				1CC27B8224D4AEA800F906F9 /* TImerModel.swift in Sources */,
 				1CC27B4B24C8C7EC00F906F9 /* AppDelegate.swift in Sources */,
+				1CC27B8A24E3942600F906F9 /* BaseCoordinator.swift in Sources */,
 				1CC27B4D24C8C7EC00F906F9 /* SceneDelegate.swift in Sources */,
+				1CC27B8424E38F7800F906F9 /* Coordinator.swift in Sources */,
+				1CC27B8824E3941A00F906F9 /* MainCoordinator.swift in Sources */,
+				1CC27B8624E38FE500F906F9 /* Sotryboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

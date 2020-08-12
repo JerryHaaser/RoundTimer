@@ -10,7 +10,7 @@
         <!--Set Timer View Controller-->
         <scene sceneID="S1M-u3-1mT">
             <objects>
-                <viewController id="coO-QA-tpv" customClass="SetTimerViewController" customModule="RoundTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetTimerViewController" id="coO-QA-tpv" customClass="SetTimerViewController" customModule="RoundTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f5J-TX-KMK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Set"/>
                                 <connections>
-                                    <action selector="setButtonPressed:" destination="coO-QA-tpv" eventType="touchUpInside" id="7VK-uC-wPi"/>
+                                    <action selector="setButtonPressed:" destination="coO-QA-tpv" eventType="touchUpInside" id="f0S-pq-PAY"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SZ-l2-hni">
@@ -71,7 +71,7 @@
         <!--Timer View Controller-->
         <scene sceneID="ohA-bN-hPt">
             <objects>
-                <viewController id="8Oh-ol-0dZ" customClass="TimerViewController" customModule="RoundTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimerViewController" id="8Oh-ol-0dZ" customClass="TimerViewController" customModule="RoundTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kn3-mx-XJO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

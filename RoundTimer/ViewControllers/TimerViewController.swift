@@ -20,7 +20,6 @@ class TimerViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var playPauseButton: UIButton!
  
     
-    
     override func viewDidLoad() { 
         super.viewDidLoad()
         setTimerClocks()
@@ -136,13 +135,14 @@ class TimerViewController: UIViewController, UIPickerViewDelegate {
 
 }
 
-//extension TimerViewController: UIPickerView {
-//    func roundAndRestTimeSet(date: String) {
+//extension TimerViewController: UIPickerViewDelegate {
+//
+//    func roundAndRestTimeSet(roundMin: Int, roundSec: Int, restMin: Int, restSec: Int) {
 //        //timeLabel.text = dateFormatter.string(from: date)
-////        roundMinuteLabel.text =
-////        roundSecondLabel.text =
-////        restMinuteLabel.text =
-////        restSecondLabel.text =
+//        roundMinuteLabel.text = "\(roundMin)"
+//        roundSecondLabel.text = "\(roundSec)"
+//        restMinuteLabel.text = "\(restMin)"
+//        restSecondLabel.text = "\(restSec)"
 //    }
 //
 //

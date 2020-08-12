@@ -9,12 +9,11 @@
 import UIKit
 
 //protocol UIPickerViewDelegate {
-//    func roundAndRestTimeSet(date: String)
+//    func roundAndRestTimeSet(roundMin: Int, roundSec: Int, restMin: Int, restSec: Int)
 //}
 
 class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    
     @IBOutlet weak var setRoundTimePicker: UIPickerView!
     @IBOutlet weak var setRestTimerPicker: UIPickerView!
     
@@ -175,18 +174,18 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func setSeperateTimeVariables() {
         guard tVC != nil else {return}
         guard let timeModel = timeModel else {return}
-        
+
         //        var roundminutes = setRoundTimePicker.selectedRow(inComponent: 0)
         //        var roundseconds = setRoundTimePicker.selectedRow(inComponent: 1)
         //        var rMinutes = setRestTimerPicker.selectedRow(inComponent: 0)
         //        var rSeconds = setRestTimerPicker.selectedRow(inComponent: 1)
-        
+
         let roundminutes = setRoundTimePicker.selectedRow(inComponent: 0)
         print(roundminutes)
         let roundseconds = setRoundTimePicker.selectedRow(inComponent: 1)
         let rMinutes = setRestTimerPicker.selectedRow(inComponent: 0)
         let rSeconds = setRestTimerPicker.selectedRow(inComponent: 1)
-        
+
         timeModel.roundMinute = roundminutes
         timeModel.roundSecond = roundseconds
         timeModel.restMinute = rMinutes
@@ -200,13 +199,17 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     @IBAction func setButtonPressed(_ sender: UIButton) {
-        //        let date = setRoundTimePicker.date
-        //        delegate?.destinationDateWasChosen(date: date)
-        //dismiss(animated: true, completion: nil)
         setSeperateTimeVariables()
-        _ = navigationController?.popToRootViewController(animated: true)
-        
+        guard let timeModel = timeModel else { return }
+        var roundMin = timeModel.roundMinute!
+        var roundSec = timeModel.roundSecond!
+        var restMin = timeModel.restMinute!
+        var restSec = timeModel.restSecond!
+        let tVC1 = TimerViewController()
+        //delegate?.roundAndRestTimeSet(roundMin: roundMin, roundSec: roundSec, restMin: restMin, restSec: restSec)
+        _ = navigationController?.popToRootViewController(animated: true)        
     }
+    
     
     /*
     // MARK: - Navigation
@@ -220,20 +223,40 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
 }
 
-//extension SetTimerViewController:UIPickerViewDelegate,UIPickerViewDataSource {
+//extension SetTimerViewController {
 //    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 2
+//        if pickerView == setRoundTimePicker {
+//    return 2
+//} else if pickerView == setRestTimerPicker {
+//    return 2
+//} else {
+//    return 1
+//}
 //    }
 //    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        switch component {
-//        case 0:
-//            return 60
-//        case 1:
-//            return 60
+//if pickerView == setRoundTimePicker {
+//    switch component {
+//    case 0:
+//        return 60
+//    case 1:
+//        return 60
 //
-//        default:
-//            return 0
-//        }
+//    default:
+//        return 0
+//    }
+//} else if pickerView == setRestTimerPicker {
+//    switch component {
+//    case 0:
+//        return 60
+//    case 1:
+//        return 60
+//
+//    default:
+//        return 0
+//    }
+//} else {
+//    return 99
+//}
 //    }
 //
 //    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
@@ -241,23 +264,49 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 //    }
 //
 //    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        switch component {
-//        case 0:
-//            return "\(row) Minute"
-//        case 1:
-//            return "\(row) Second"
-//        default:
-//            return ""
-//        }
+//if pickerView == setRoundTimePicker {
+//    switch component {
+//    case 0:
+//        return "\(row) Minute"
+//    case 1:
+//        return "\(row) Second"
+//    default:
+//        return ""
+//    }
+//} else if pickerView == setRestTimerPicker {
+//    switch component {
+//    case 0:
+//        return "\(row) Minute"
+//    case 1:
+//        return "\(row) Second"
+//    default:
+//        return ""
+//    }
+//} else {
+//    return "\(row) Rounds"
+//}
 //    }
 //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        switch component {
-//        case 0:
-//            minutes = row
-//        case 1:
-//            seconds = row
-//        default:
-//            break;
-//        }
+//if pickerView == setRoundTimePicker {
+//    switch component {
+//    case 0:
+//        minutes = row
+//    case 1:
+//        seconds = row
+//    default:
+//        break;
+//    }
+//} else if pickerView == setRestTimerPicker {
+//    switch component {
+//    case 0:
+//        minutes = row
+//    case 1:
+//        seconds = row
+//    default:
+//        break;
+//    }
+//} else {
+//    numOfRounds = row
+//}
 //    }
 //}
