@@ -210,6 +210,8 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         _ = navigationController?.popToRootViewController(animated: true)        
     }
     
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+    }
     
     /*
     // MARK: - Navigation

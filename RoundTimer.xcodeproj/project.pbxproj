@@ -115,10 +115,10 @@
 			children = (
 				1CC27B4A24C8C7EC00F906F9 /* AppDelegate.swift */,
 				1CC27B4C24C8C7EC00F906F9 /* SceneDelegate.swift */,
+				1CC27B5024C8C7EC00F906F9 /* Main.storyboard */,
 				1CC27B8C24E3961500F906F9 /* ViewControllers */,
 				1CC27B8124D4AEA800F906F9 /* TImerModel.swift */,
 				1CC27B8B24E3960600F906F9 /* Coordinators */,
-				1CC27B5024C8C7EC00F906F9 /* Main.storyboard */,
 				1CC27B5624C8C7EE00F906F9 /* Assets.xcassets */,
 				1CC27B5824C8C7EE00F906F9 /* LaunchScreen.storyboard */,
 				1CC27B5B24C8C7EE00F906F9 /* Info.plist */,

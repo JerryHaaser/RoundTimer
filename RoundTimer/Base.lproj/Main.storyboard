@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKc-0R-e9o">
-                                <rect key="frame" x="188.5" y="660" width="37" height="42"/>
+                                <rect key="frame" x="188.5" y="616" width="37" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Set"/>
                                 <connections>
@@ -24,17 +24,27 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SZ-l2-hni">
-                                <rect key="frame" x="0.0" y="108" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="216"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3I-He-0Ks">
-                                <rect key="frame" x="0.0" y="344" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="300" width="414" height="216"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwf-fH-slz">
+                                <rect key="frame" x="183" y="718" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="coO-QA-tpv" eventType="touchUpInside" id="Jd7-hn-cqh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="H3I-He-0Ks" firstAttribute="top" secondItem="8SZ-l2-hni" secondAttribute="bottom" constant="20" id="0IB-Mx-Ofl"/>
                             <constraint firstItem="6X6-w6-pjS" firstAttribute="trailing" secondItem="8SZ-l2-hni" secondAttribute="trailing" id="0pp-p8-Hft"/>
                             <constraint firstItem="H3I-He-0Ks" firstAttribute="leading" secondItem="6X6-w6-pjS" secondAttribute="leading" id="9de-66-yA5"/>
+                            <constraint firstItem="dwf-fH-slz" firstAttribute="top" secondItem="qKc-0R-e9o" secondAttribute="bottom" constant="60" id="EHx-fU-BHZ"/>
+                            <constraint firstItem="dwf-fH-slz" firstAttribute="centerX" secondItem="f5J-TX-KMK" secondAttribute="centerX" id="FNx-hx-UW2"/>
                             <constraint firstItem="qKc-0R-e9o" firstAttribute="centerX" secondItem="f5J-TX-KMK" secondAttribute="centerX" id="GOe-cO-LDI"/>
                             <constraint firstItem="qKc-0R-e9o" firstAttribute="top" secondItem="H3I-He-0Ks" secondAttribute="bottom" constant="100" id="NIH-JT-4G1"/>
                             <constraint firstItem="8SZ-l2-hni" firstAttribute="leading" secondItem="f5J-TX-KMK" secondAttribute="leading" id="avz-72-t1F"/>
@@ -154,7 +164,6 @@
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="lXk-tG-aSP">
                             <connections>
                                 <action selector="setTimerButtonPushed:" destination="8Oh-ol-0dZ" id="gem-N6-566"/>
-                                <segue destination="coO-QA-tpv" kind="show" identifier="SetRoundTimeSegue" id="vpJ-2z-8Ln"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
