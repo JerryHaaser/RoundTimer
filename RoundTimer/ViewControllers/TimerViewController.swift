@@ -8,9 +8,12 @@
 
 import UIKit
 
-class TimerViewController: UIViewController, UIPickerViewDelegate {
+protocol TimerVCCoordinatorDelegate {
     
-
+}
+class TimerViewController: UIViewController, UIPickerViewDelegate, Storyboarded {
+    
+        
     @IBOutlet weak var setTimerButton: UIBarButtonItem!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var roundMinuteLabel: UILabel!
@@ -18,7 +21,9 @@ class TimerViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var restMinuteLabel: UILabel!
     @IBOutlet weak var restSecondLabel: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
- 
+    
+    var coordinator: BaseCoordinator?
+    var delegate: TimerVCCoordinatorDelegate?
     
     override func viewDidLoad() { 
         super.viewDidLoad()
@@ -124,13 +129,13 @@ class TimerViewController: UIViewController, UIPickerViewDelegate {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SetRoundTimeSegue" {
-            if let setTimerVC = segue.destination as? SetTimerViewController {
-                setTimerVC.delegate = self
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "SetRoundTimeSegue" {
+//            if let setTimerVC = segue.destination as? SetTimerViewController {
+//                setTimerVC.delegate = self
+//            }
+//        }
+//    }
     
 
 }

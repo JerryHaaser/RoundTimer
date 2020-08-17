@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C574D2D24E5BF4A00F2B254 /* TimerVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D2C24E5BF4A00F2B254 /* TimerVCCoordinator.swift */; };
+		1C574D2F24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D2E24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift */; };
 		1CC27B4B24C8C7EC00F906F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B4A24C8C7EC00F906F9 /* AppDelegate.swift */; };
 		1CC27B4D24C8C7EC00F906F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B4C24C8C7EC00F906F9 /* SceneDelegate.swift */; };
 		1CC27B5224C8C7EC00F906F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC27B5024C8C7EC00F906F9 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C574D2C24E5BF4A00F2B254 /* TimerVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVCCoordinator.swift; sourceTree = "<group>"; };
+		1C574D2E24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerVCCoordinator.swift; sourceTree = "<group>"; };
 		1CC27B4724C8C7EC00F906F9 /* RoundTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC27B4A24C8C7EC00F906F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CC27B4C24C8C7EC00F906F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,9 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				1CC27B8324E38F7800F906F9 /* Coordinator.swift */,
-				1CC27B8724E3941A00F906F9 /* MainCoordinator.swift */,
 				1CC27B8924E3942600F906F9 /* BaseCoordinator.swift */,
 				1CC27B8524E38FE500F906F9 /* Sotryboarded.swift */,
+				1CC27B8724E3941A00F906F9 /* MainCoordinator.swift */,
+				1C574D2C24E5BF4A00F2B254 /* TimerVCCoordinator.swift */,
+				1C574D2E24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -296,9 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C574D2F24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift in Sources */,
 				1CC27B8024C8F7E200F906F9 /* SetTimerViewController.swift in Sources */,
 				1CC27B7E24C8F35400F906F9 /* TimerViewController.swift in Sources */,
 				1CC27B5524C8C7EC00F906F9 /* RoundTimer.xcdatamodeld in Sources */,
+				1C574D2D24E5BF4A00F2B254 /* TimerVCCoordinator.swift in Sources */,
 				1CC27B8224D4AEA800F906F9 /* TImerModel.swift in Sources */,
 				1CC27B4B24C8C7EC00F906F9 /* AppDelegate.swift in Sources */,
 				1CC27B8A24E3942600F906F9 /* BaseCoordinator.swift in Sources */,

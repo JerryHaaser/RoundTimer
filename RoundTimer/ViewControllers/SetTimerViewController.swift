@@ -12,10 +12,22 @@ import UIKit
 //    func roundAndRestTimeSet(roundMin: Int, roundSec: Int, restMin: Int, restSec: Int)
 //}
 
-class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+//protocol SetTimerDelegate {
+//    func toTimerVC()
+//}
+
+//protocol SetTimerVCD {
+//    <#requirements#>
+//}
+
+class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, Storyboarded {
 
     @IBOutlet weak var setRoundTimePicker: UIPickerView!
     @IBOutlet weak var setRestTimerPicker: UIPickerView!
+    
+    var coordinator: BaseCoordinator?
+    
+    var delegate: SetTimerVCCoordinatorDelegate?
     
     var tVC: TimerViewController?
     var timeModel: TimeModel?
@@ -26,7 +38,7 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 //    var restSeconds: Int?
     
     
-    var delegate: UIPickerViewDelegate?
+    var pickerDelegate: UIPickerViewDelegate?
     
     var dateFormatter = DateFormatter()
     
