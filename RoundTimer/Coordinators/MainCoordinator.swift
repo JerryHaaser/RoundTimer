@@ -48,14 +48,23 @@ class MainCoordinator: BaseCoordinator {
 }
 
 extension MainCoordinator: TimerVCCoordinatorDelegate {
+//    
+//    func toSetTimerVC() {
+//        let vc = SetTimerViewController.instantiate()
+//        vc.coordinator = self
+//        vc.delegate = self
+//        navigationController.pushViewController(vc, animated: true)
+//    }
     
+}
+
+extension MainCoordinator: TimerVCDelegate {
     func toSetTimerVC() {
         let vc = SetTimerViewController.instantiate()
         vc.coordinator = self
         vc.delegate = self
         navigationController.pushViewController(vc, animated: true)
     }
-    
 }
 
 extension MainCoordinator: SetTimerVCCoordinatorDelegate {

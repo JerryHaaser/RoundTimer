@@ -8,9 +8,14 @@
 
 import UIKit
 
-protocol TimerVCCoordinatorDelegate {
-    
+//protocol TimerVCCoordinatorDelegate {
+//    
+//}
+
+protocol TimerVCDelegate {
+    func toSetTimerVC()
 }
+
 class TimerViewController: UIViewController, UIPickerViewDelegate, Storyboarded {
     
         
@@ -23,7 +28,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, Storyboarded 
     @IBOutlet weak var playPauseButton: UIButton!
     
     var coordinator: BaseCoordinator?
-    var delegate: TimerVCCoordinatorDelegate?
+    var delegate: TimerVCDelegate?
     
     override func viewDidLoad() { 
         super.viewDidLoad()
@@ -118,7 +123,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, Storyboarded 
     
     
     @IBAction func setTimerButtonPushed(_ sender: Any) {
-        
+        delegate?.toSetTimerVC()
     }
     
     @IBAction func playPauseButtonPushed(_ sender: UIButton) {

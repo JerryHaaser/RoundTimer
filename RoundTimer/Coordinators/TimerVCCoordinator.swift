@@ -13,7 +13,7 @@ protocol TimerVCCoordinatorDelegate: class {
     
 }
 
-class TimerVCCoordinator: BaseCoordinator {
+class TimerVCCoordinator: BaseCoordinator, SetTimerVCCoordinatorDelegate {
     
     var navigationController: UINavigationController?
     var timerVC = TimerViewController.instantiate()
@@ -23,8 +23,15 @@ class TimerVCCoordinator: BaseCoordinator {
        // let viewController = TimerViewController.instantiate()
         let viewController = TimerViewController.instantiate()
         viewController.coordinator = self
-        viewController.delegate = delegate
+        //viewController.delegate = delegate
         navigationController?.setViewControllers([viewController], animated: true)
+    }
+    
+    func toSetTimerVC() {
+        let vc = SetTimerViewController.instantiate()
+        vc.coordinator = self
+        vc.delegate = self
+        navigationController!.pushViewController(vc, animated: true)
     }
     
 }
