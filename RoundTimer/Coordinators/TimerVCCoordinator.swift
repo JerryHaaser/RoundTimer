@@ -27,11 +27,11 @@ class TimerVCCoordinator: BaseCoordinator, SetTimerVCCoordinatorDelegate {
         navigationController?.setViewControllers([viewController], animated: true)
     }
     
-    func toSetTimerVC() {
-        let vc = SetTimerViewController.instantiate()
-        vc.coordinator = self
-        vc.delegate = self
-        navigationController!.pushViewController(vc, animated: true)
-    }
+//    func toSetTimerVC() {
+//        let vc = SetTimerViewController.instantiate()
+//        vc.coordinator = self
+//        vc.delegate = self
+//        navigationController!.pushViewController(vc, animated: true)
+//    }
     
 }

@@ -19,7 +19,7 @@ class SetTimerVCCoordinator: BaseCoordinator {
     override func start() {
         let viewController = SetTimerViewController.instantiate()
         viewController.coordinator = self
-        viewController.delegate = delegate
+        viewController.delegate = delegate as! SetTimerVCDelegate
         
     }
     

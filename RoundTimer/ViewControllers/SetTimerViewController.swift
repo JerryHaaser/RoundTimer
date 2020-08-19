@@ -8,17 +8,10 @@
 
 import UIKit
 
-//protocol UIPickerViewDelegate {
-//    func roundAndRestTimeSet(roundMin: Int, roundSec: Int, restMin: Int, restSec: Int)
-//}
+protocol SetTimerVCDelegate {
+    func toTimerVC()
+}
 
-//protocol SetTimerDelegate {
-//    func toTimerVC()
-//}
-
-//protocol SetTimerVCD {
-//    <#requirements#>
-//}
 
 class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, Storyboarded {
 
@@ -27,7 +20,7 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     var coordinator: BaseCoordinator?
     
-    var delegate: SetTimerVCCoordinatorDelegate?
+    var delegate: SetTimerVCDelegate?
     
     var tVC: TimerViewController?
     var timeModel: TimeModel?
@@ -212,17 +205,18 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func setButtonPressed(_ sender: UIButton) {
         setSeperateTimeVariables()
-        guard let timeModel = timeModel else { return }
-        var roundMin = timeModel.roundMinute!
-        var roundSec = timeModel.roundSecond!
-        var restMin = timeModel.restMinute!
-        var restSec = timeModel.restSecond!
-        let tVC1 = TimerViewController()
+//        guard let timeModel = timeModel else { return }
+//        var roundMin = timeModel.roundMinute!
+//        var roundSec = timeModel.roundSecond!
+//        var restMin = timeModel.restMinute!
+//        var restSec = timeModel.restSecond!
+//        let tVC1 = TimerViewController()
         //delegate?.roundAndRestTimeSet(roundMin: roundMin, roundSec: roundSec, restMin: restMin, restSec: restSec)
-        _ = navigationController?.popToRootViewController(animated: true)        
+        delegate?.toTimerVC()
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        delegate?.toTimerVC()
     }
     
     /*

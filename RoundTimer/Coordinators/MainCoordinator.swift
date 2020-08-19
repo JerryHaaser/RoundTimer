@@ -38,12 +38,12 @@ class MainCoordinator: BaseCoordinator {
 //        navigationController.pushViewController(vc, animated: true)
 //    }
     
-    func toTimerVC() {
-        let vc = TimerViewController.instantiate()
-        vc.coordinator = self
-        vc.delegate = self
-        navigationController.pushViewController(vc, animated: true)
-    }
+//    func toTimerVC() {
+//        let vc = TimerViewController.instantiate()
+//        vc.coordinator = self
+//        vc.delegate = self
+//        navigationController.pushViewController(vc, animated: true)
+//    }
     
 }
 
@@ -65,6 +65,17 @@ extension MainCoordinator: TimerVCDelegate {
         vc.delegate = self
         navigationController.pushViewController(vc, animated: true)
     }
+}
+
+extension MainCoordinator: SetTimerVCDelegate {
+    func toTimerVC() {
+        let vc = TimerViewController.instantiate()
+        //vc.navigationController = navigationController
+        vc.coordinator = self
+        vc.delegate = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+
 }
 
 extension MainCoordinator: SetTimerVCCoordinatorDelegate {
