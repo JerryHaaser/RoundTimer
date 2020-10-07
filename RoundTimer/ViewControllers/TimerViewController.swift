@@ -43,15 +43,16 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, Storyboarded 
         setTimerClocks()
     }
     
+    
     var timer: Timer?
     
     var sTVC: SetTimerViewController?
-    var timeModel: TimeModel?
+    //var timeModel: TimeModel?
     
-//    var roundMinutes: Int?
-//    var roundSeconds: Int?
-//    var restMinutes: Int?
-//    var restSeconds: Int?
+    var roundMinutes: Int?
+    var roundSeconds: Int?
+    var restMinutes: Int?
+    var restSeconds: Int?
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -60,56 +61,56 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, Storyboarded 
     }
     
     func setTimerClocks() {
-        guard let sTVC = sTVC else {return}
-        guard let timeModel = timeModel else {return}
+        //guard let sTVC = sTVC else {return}
+        //guard let timeModel = timeModel else {return}
         
-//        if sTVC.roundMinutes == nil {
-//            roundMinuteLabel.text = "00"
-//        } else {
-//            roundMinuteLabel.text = "\(String(describing: sTVC.roundMinutes))"
-//        }
-//
-//        if sTVC.roundSeconds == nil {
-//            roundSecondLabel.text = "00"
-//        } else {
-//            roundSecondLabel.text = "\(String(describing: sTVC.roundSeconds))"
-//        }
-//
-//        if sTVC.restMinutes == nil {
-//            restMinuteLabel.text = "00"
-//        } else {
-//            restMinuteLabel.text = "\(String(describing: sTVC.restSeconds))"
-//        }
-//
-//        if sTVC.restSeconds == nil {
-//            restSecondLabel.text = "00"
-//        } else {
-//            restSecondLabel.text = "\(String(describing: sTVC.restSeconds))"
-//        }
-        
-        if timeModel.roundMinute == nil {
+        if roundMinutes == nil {
             roundMinuteLabel.text = "00"
         } else {
-            roundMinuteLabel.text = "\(String(describing: timeModel.roundMinute))"
+            roundMinuteLabel.text = "\(String(describing: roundMinutes))"
         }
-        
-        if timeModel.roundSecond == nil {
+
+        if roundSeconds == nil {
             roundSecondLabel.text = "00"
         } else {
-            roundSecondLabel.text = "\(String(describing: timeModel.roundSecond))"
+            roundSecondLabel.text = "\(String(describing: roundSeconds))"
         }
-        
-        if timeModel.restMinute == nil {
+
+        if restMinutes == nil {
             restMinuteLabel.text = "00"
         } else {
-            restMinuteLabel.text = "\(String(describing: timeModel.restMinute))"
+            restMinuteLabel.text = "\(String(describing: restSeconds))"
         }
-        
-        if timeModel.restSecond == nil {
+
+        if restSeconds == nil {
             restSecondLabel.text = "00"
         } else {
-            restSecondLabel.text = "\(String(describing: timeModel.restSecond))"
+            restSecondLabel.text = "\(String(describing: restSeconds))"
         }
+        
+//        if timeModel.roundMinute == nil {
+//            roundMinuteLabel.text = "00"
+//        } else {
+//            roundMinuteLabel.text = "\(String(describing: timeModel.roundMinute))"
+//        }
+//
+//        if timeModel.roundSecond == nil {
+//            roundSecondLabel.text = "00"
+//        } else {
+//            roundSecondLabel.text = "\(String(describing: timeModel.roundSecond))"
+//        }
+//
+//        if timeModel.restMinute == nil {
+//            restMinuteLabel.text = "00"
+//        } else {
+//            restMinuteLabel.text = "\(String(describing: timeModel.restMinute))"
+//        }
+//
+//        if timeModel.restSecond == nil {
+//            restSecondLabel.text = "00"
+//        } else {
+//            restSecondLabel.text = "\(String(describing: timeModel.restSecond))"
+//        }
     }
     
     func startTimer() {

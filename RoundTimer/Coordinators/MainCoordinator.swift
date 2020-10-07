@@ -19,6 +19,11 @@ class MainCoordinator: BaseCoordinator {
     //let timerVCCoordinator = ()
     var setTimerVC = SetTimerViewController()
     
+    var roundMinutes: Int?
+    var roundSeconds: Int?
+    var restMinutes: Int?
+    var restSeconds: Int?
+    
     init(window: UIWindow) {
         self.window = window
     }
@@ -64,6 +69,7 @@ extension MainCoordinator: TimerVCDelegate {
         vc.coordinator = self
         vc.delegate = self
         navigationController.pushViewController(vc, animated: true)
+        
     }
 }
 
@@ -74,6 +80,7 @@ extension MainCoordinator: SetTimerVCDelegate {
         vc.coordinator = self
         vc.delegate = self
         navigationController.pushViewController(vc, animated: true)
+        //navigationController.popToRootViewController(animated: true)
     }
 
 }

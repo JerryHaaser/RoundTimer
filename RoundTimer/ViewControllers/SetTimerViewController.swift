@@ -23,12 +23,29 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var delegate: SetTimerVCDelegate?
     
     var tVC: TimerViewController?
-    var timeModel: TimeModel?
+    //var timeModel: TimeModel?
     
-//    var roundMinutes: Int?
-//    var roundSeconds: Int?
-//    var restMinutes: Int?
-//    var restSeconds: Int?
+    var roundMinutes: Int? {
+        didSet {
+            tVC?.roundMinutes = roundMinutes
+        }
+    }
+    
+    var roundSeconds: Int?{
+        didSet {
+            tVC?.roundSeconds = roundSeconds
+        }
+    }
+    var restMinutes: Int?{
+        didSet {
+            tVC?.restMinutes = restMinutes
+        }
+    }
+    var restSeconds: Int?{
+        didSet {
+            tVC?.restSeconds = restSeconds
+        }
+    }
     
     
     var pickerDelegate: UIPickerViewDelegate?
@@ -178,7 +195,7 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
     func setSeperateTimeVariables() {
         guard tVC != nil else {return}
-        guard let timeModel = timeModel else {return}
+        //guard let timeModel = timeModel else {return}
 
         //        var roundminutes = setRoundTimePicker.selectedRow(inComponent: 0)
         //        var roundseconds = setRoundTimePicker.selectedRow(inComponent: 1)
@@ -191,10 +208,10 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let rMinutes = setRestTimerPicker.selectedRow(inComponent: 0)
         let rSeconds = setRestTimerPicker.selectedRow(inComponent: 1)
 
-        timeModel.roundMinute = roundminutes
-        timeModel.roundSecond = roundseconds
-        timeModel.restMinute = rMinutes
-        timeModel.restSecond = rSeconds
+//        timeModel.roundMinute = roundminutes
+//        timeModel.roundSecond = roundseconds
+//        timeModel.restMinute = rMinutes
+//        timeModel.restSecond = rSeconds
         //
         //        roundMinutes = roundminutes
         //        roundSeconds = roundseconds
@@ -202,9 +219,21 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         //        restSeconds = rSeconds
     }
     
+    func setClockLabel() {
+        roundMinutes = setRoundTimePicker.selectedRow(inComponent: 0)
+        roundSeconds = setRoundTimePicker.selectedRow(inComponent: 1)
+        restMinutes = setRestTimerPicker.selectedRow(inComponent: 0)
+        restSeconds = setRestTimerPicker.selectedRow(inComponent: 1)
+    }
+    
     
     @IBAction func setButtonPressed(_ sender: UIButton) {
-        setSeperateTimeVariables()
+        
+        print(setRoundTimePicker.selectedRow(inComponent: 0))
+        print(setRoundTimePicker.selectedRow(inComponent: 1))
+        setClockLabel()
+        
+        //setSeperateTimeVariables()
 //        guard let timeModel = timeModel else { return }
 //        var roundMin = timeModel.roundMinute!
 //        var roundSec = timeModel.roundSecond!
@@ -212,11 +241,13 @@ class SetTimerViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 //        var restSec = timeModel.restSecond!
 //        let tVC1 = TimerViewController()
         //delegate?.roundAndRestTimeSet(roundMin: roundMin, roundSec: roundSec, restMin: restMin, restSec: restSec)
-        delegate?.toTimerVC()
+        navigationController?.popToRootViewController(animated: true)
+        //delegate?.toTimerVC()
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
-        delegate?.toTimerVC()
+        navigationController?.popToRootViewController(animated: true)
+        //delegate?.toTimerVC()
     }
     
     /*

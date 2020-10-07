@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		1C574D2D24E5BF4A00F2B254 /* TimerVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D2C24E5BF4A00F2B254 /* TimerVCCoordinator.swift */; };
 		1C574D2F24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D2E24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift */; };
+		1C574D3125192E1B00F2B254 /* CircuitModelRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D3025192E1B00F2B254 /* CircuitModelRepresentation.swift */; };
+		1C574D3325192EBA00F2B254 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D3225192EBA00F2B254 /* CoreDataStack.swift */; };
+		1C574D37251931D900F2B254 /* CircuitModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D35251931D900F2B254 /* CircuitModel.xcdatamodeld */; };
+		1C574D3A2519327A00F2B254 /* CircuitModel+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D392519327A00F2B254 /* CircuitModel+Convenience.swift */; };
+		1C574D3C251936A900F2B254 /* CircuitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D3B251936A900F2B254 /* CircuitController.swift */; };
+		1C574D3E2519394100F2B254 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C574D3D2519394100F2B254 /* NetworkController.swift */; };
+		1C6A5024252E392A00670A78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6A5023252E392A00670A78 /* Constants.swift */; };
+		1C6A5026252E3B9C00670A78 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6A5025252E3B9C00670A78 /* URL+Extension.swift */; };
 		1CC27B4B24C8C7EC00F906F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B4A24C8C7EC00F906F9 /* AppDelegate.swift */; };
 		1CC27B4D24C8C7EC00F906F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B4C24C8C7EC00F906F9 /* SceneDelegate.swift */; };
 		1CC27B5224C8C7EC00F906F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC27B5024C8C7EC00F906F9 /* Main.storyboard */; };
@@ -19,7 +27,6 @@
 		1CC27B7024C8C7EF00F906F9 /* RoundTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B6F24C8C7EF00F906F9 /* RoundTimerUITests.swift */; };
 		1CC27B7E24C8F35400F906F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */; };
 		1CC27B8024C8F7E200F906F9 /* SetTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */; };
-		1CC27B8224D4AEA800F906F9 /* TImerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8124D4AEA800F906F9 /* TImerModel.swift */; };
 		1CC27B8424E38F7800F906F9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8324E38F7800F906F9 /* Coordinator.swift */; };
 		1CC27B8624E38FE500F906F9 /* Sotryboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8524E38FE500F906F9 /* Sotryboarded.swift */; };
 		1CC27B8824E3941A00F906F9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC27B8724E3941A00F906F9 /* MainCoordinator.swift */; };
@@ -46,6 +53,14 @@
 /* Begin PBXFileReference section */
 		1C574D2C24E5BF4A00F2B254 /* TimerVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerVCCoordinator.swift; sourceTree = "<group>"; };
 		1C574D2E24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerVCCoordinator.swift; sourceTree = "<group>"; };
+		1C574D3025192E1B00F2B254 /* CircuitModelRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitModelRepresentation.swift; sourceTree = "<group>"; };
+		1C574D3225192EBA00F2B254 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1C574D36251931D900F2B254 /* CircuitModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CircuitModel.xcdatamodel; sourceTree = "<group>"; };
+		1C574D392519327A00F2B254 /* CircuitModel+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CircuitModel+Convenience.swift"; sourceTree = "<group>"; };
+		1C574D3B251936A900F2B254 /* CircuitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitController.swift; sourceTree = "<group>"; };
+		1C574D3D2519394100F2B254 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		1C6A5023252E392A00670A78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1C6A5025252E3B9C00670A78 /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		1CC27B4724C8C7EC00F906F9 /* RoundTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoundTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC27B4A24C8C7EC00F906F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CC27B4C24C8C7EC00F906F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +77,6 @@
 		1CC27B7124C8C7EF00F906F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CC27B7D24C8F35400F906F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		1CC27B7F24C8F7E200F906F9 /* SetTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimerViewController.swift; sourceTree = "<group>"; };
-		1CC27B8124D4AEA800F906F9 /* TImerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TImerModel.swift; sourceTree = "<group>"; };
 		1CC27B8324E38F7800F906F9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1CC27B8524E38FE500F906F9 /* Sotryboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sotryboarded.swift; sourceTree = "<group>"; };
 		1CC27B8724E3941A00F906F9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -94,6 +108,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C574D34251931B700F2B254 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1C574D382519324200F2B254 /* Representations */,
+				1C574D3225192EBA00F2B254 /* CoreDataStack.swift */,
+				1C574D35251931D900F2B254 /* CircuitModel.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1C574D382519324200F2B254 /* Representations */ = {
+			isa = PBXGroup;
+			children = (
+				1C574D3025192E1B00F2B254 /* CircuitModelRepresentation.swift */,
+			);
+			path = Representations;
+			sourceTree = "<group>";
+		};
 		1CC27B3E24C8C7EC00F906F9 = {
 			isa = PBXGroup;
 			children = (
@@ -119,9 +151,14 @@
 			children = (
 				1CC27B4A24C8C7EC00F906F9 /* AppDelegate.swift */,
 				1CC27B4C24C8C7EC00F906F9 /* SceneDelegate.swift */,
+				1C6A5023252E392A00670A78 /* Constants.swift */,
 				1CC27B5024C8C7EC00F906F9 /* Main.storyboard */,
 				1CC27B8C24E3961500F906F9 /* ViewControllers */,
-				1CC27B8124D4AEA800F906F9 /* TImerModel.swift */,
+				1C574D34251931B700F2B254 /* Data */,
+				1C574D392519327A00F2B254 /* CircuitModel+Convenience.swift */,
+				1C574D3B251936A900F2B254 /* CircuitController.swift */,
+				1C574D3D2519394100F2B254 /* NetworkController.swift */,
+				1C6A5025252E3B9C00670A78 /* URL+Extension.swift */,
 				1CC27B8B24E3960600F906F9 /* Coordinators */,
 				1CC27B5624C8C7EE00F906F9 /* Assets.xcassets */,
 				1CC27B5824C8C7EE00F906F9 /* LaunchScreen.storyboard */,
@@ -302,18 +339,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C574D3A2519327A00F2B254 /* CircuitModel+Convenience.swift in Sources */,
 				1C574D2F24E5BF5A00F2B254 /* SetTimerVCCoordinator.swift in Sources */,
+				1C574D37251931D900F2B254 /* CircuitModel.xcdatamodeld in Sources */,
+				1C574D3E2519394100F2B254 /* NetworkController.swift in Sources */,
 				1CC27B8024C8F7E200F906F9 /* SetTimerViewController.swift in Sources */,
 				1CC27B7E24C8F35400F906F9 /* TimerViewController.swift in Sources */,
 				1CC27B5524C8C7EC00F906F9 /* RoundTimer.xcdatamodeld in Sources */,
 				1C574D2D24E5BF4A00F2B254 /* TimerVCCoordinator.swift in Sources */,
-				1CC27B8224D4AEA800F906F9 /* TImerModel.swift in Sources */,
+				1C574D3125192E1B00F2B254 /* CircuitModelRepresentation.swift in Sources */,
+				1C574D3325192EBA00F2B254 /* CoreDataStack.swift in Sources */,
+				1C574D3C251936A900F2B254 /* CircuitController.swift in Sources */,
+				1C6A5026252E3B9C00670A78 /* URL+Extension.swift in Sources */,
 				1CC27B4B24C8C7EC00F906F9 /* AppDelegate.swift in Sources */,
 				1CC27B8A24E3942600F906F9 /* BaseCoordinator.swift in Sources */,
 				1CC27B4D24C8C7EC00F906F9 /* SceneDelegate.swift in Sources */,
 				1CC27B8424E38F7800F906F9 /* Coordinator.swift in Sources */,
 				1CC27B8824E3941A00F906F9 /* MainCoordinator.swift in Sources */,
 				1CC27B8624E38FE500F906F9 /* Sotryboarded.swift in Sources */,
+				1C6A5024252E392A00670A78 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +688,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		1C574D35251931D900F2B254 /* CircuitModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1C574D36251931D900F2B254 /* CircuitModel.xcdatamodel */,
+			);
+			currentVersion = 1C574D36251931D900F2B254 /* CircuitModel.xcdatamodel */;
+			path = CircuitModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		1CC27B5324C8C7EC00F906F9 /* RoundTimer.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
